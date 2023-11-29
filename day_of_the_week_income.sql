@@ -23,6 +23,6 @@ case
         when t1.day_num = '6' then 'Saturday'
         when t1.day_num = '7' then 'Sunday'
 end as weekday,
-round(income)
+round(income) as income
 from t1
 order by t1.day_num,t1.name;
