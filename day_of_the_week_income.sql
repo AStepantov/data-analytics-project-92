@@ -10,7 +10,6 @@ left join products as p
 on s.product_id = p.product_id
 group by e.first_name,e.last_name,day_num
 having sum(s.quantity*p.price) is not null
-order by name,day_num
 )
 select 
 t1.name,
