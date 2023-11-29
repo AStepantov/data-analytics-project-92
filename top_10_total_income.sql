@@ -10,3 +10,4 @@ on s.sales_person_id = e.employee_id
 group by e.first_name, e.last_name
 order by income desc 
 limit 10
+
