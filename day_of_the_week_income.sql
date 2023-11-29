@@ -15,13 +15,13 @@ order by name,day_num
 select 
 t1.name,
 case 
-		when t1.day_num = '1' then 'Monday'
-        when t1.day_num = '2' then 'Tuesday'
-        when t1.day_num = '3' then 'Wednesday'
-        when t1.day_num = '4' then 'Thursday'
-        when t1.day_num = '5' then 'Friday'
-        when t1.day_num = '6' then 'Saturday'
-        when t1.day_num = '7' then 'Sunday'
+	when t1.day_num = '1' then 'monday'
+        when t1.day_num = '2' then 'tuesday'
+        when t1.day_num = '3' then 'wednesday'
+        when t1.day_num = '4' then 'thursday'
+        when t1.day_num = '5' then 'friday'
+        when t1.day_num = '6' then 'saturday'
+        when t1.day_num = '7' then 'sunday'
 end as weekday,
 round(income) as income
 from t1
