@@ -1,6 +1,6 @@
 select
 to_char(s.sale_date,'YYYY-mm')as date ,
-count(distinct c.first_name||'_'||c.last_name||'_'||c.age) as total_customer,
+count(distinct c.first_name||'_'||c.last_name||'_'||c.age) as total_customers,
 round(sum(s.quantity*p.price),0) as income
 from sales s 
 left join customers c
