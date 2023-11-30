@@ -1,7 +1,7 @@
 select 
 concat(e.first_name,' ', e.last_name) as name,
 count(s.product_id) as operations,
-round(sum(s.quantity*p.price),0) as income
+floor(sum(s.quantity*p.price)) as income
 from sales s 
 left join products p 
 on S.product_id=P.product_id
