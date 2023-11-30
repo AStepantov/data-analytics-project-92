@@ -2,7 +2,7 @@ with t1 as (
 select 
 concat(e.first_name,' ',e.last_name) as name,
 extract (isodow from s.sale_date) as day_num,
-floor(sum(s.quantity*p.price)) as income
+round(sum(s.quantity*p.price),0) as income
 from sales s 
 left join employees e 
 on s.sales_person_id = e.employee_id 
